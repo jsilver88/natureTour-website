@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(port) {
+    font-size: 50%;
+  }
+
+  @include respond(large) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(port) {
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
